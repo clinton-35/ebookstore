@@ -54,7 +54,7 @@ public class CartServlet extends HttpServlet {
             // Read the books from the database with the respective bookIds
             List<Book> books = bookService.getBooksByCommaSeperatedBookIds(bookIds);
             List<Cart> cartItems = new ArrayList<Cart>();
-            pw.println("<div id='topmid' style='background-color:grey'>Shopping Cart</div>");
+            pw.println("<div id='topmid' style='background-color:grey'>Cart</div>");
             pw.println("<table class=\"table table-hover\" style='background-color:white'>\r\n"
                     + "  <thead>\r\n"
                     + "    <tr style='background-color:black; color:white;'>\r\n"
@@ -70,7 +70,7 @@ public class CartServlet extends HttpServlet {
             double amountToPay = 0;
             if (books == null || books.size() == 0) {
                 pw.println("    <tr style='background-color:green'>\r\n"
-                        + "      <th scope=\"row\" colspan='6' style='color:yellow; text-align:center;'> No Items In the Cart </th>\r\n"
+                        + "      <th scope=\"row\" colspan='6' style='color:grey; text-align:center;'> No Items In the Cart </th>\r\n"
                         + "    </tr>\r\n");
             }
             for (Book book : books) {
@@ -88,7 +88,7 @@ public class CartServlet extends HttpServlet {
             if (amountToPay > 0) {
                 pw.println("    <tr style='background-color:green'>\r\n"
                         + "      <th scope=\"row\" colspan='5' style='color:yellow; text-align:center;'> Total Amount To Pay </th>\r\n"
-                        + "      <td colspan='1' style='color:white; font-weight:bold'><span>&#8377;</span> "
+                        + "      <td colspan='1' style='color:white; font-weight:bold'>"
                         + amountToPay
                         + "</td>\r\n"
                         + "    </tr>\r\n");
@@ -98,7 +98,7 @@ public class CartServlet extends HttpServlet {
             if (amountToPay > 0) {
                 pw.println("<div style='text-align:right; margin-right:20px;'>\r\n"
                         + "<form action=\"checkout\" method=\"post\">"
-                        + "<input type='submit' class=\"btn btn-primary\" name='pay' value='Proceed to Pay &#8377; "
+                        + "<input type='submit' class=\"btn btn-primary\" name='pay' value='Proceed to Pay: " 
                         + amountToPay + "'/></form>"
                         + "    </div>");
             }
@@ -113,12 +113,12 @@ public class CartServlet extends HttpServlet {
                 + "      <th scope=\"row\">" + book.getBarcode() + "</th>\r\n"
                 + "      <td>" + book.getName() + "</td>\r\n"
                 + "      <td>" + book.getAuthor() + "</td>\r\n"
-                + "      <td><span>&#8377;</span> " + book.getPrice() + "</td>\r\n"
+                + "      <td>" + book.getPrice() + "</td>\r\n"
                 + "      <td><form method='post' action='cart'><button type='submit' name='removeFromCart' class=\"glyphicon glyphicon-minus btn btn-danger\"></button> "
                 + "<input type='hidden' name='selectedBookId' value='" + book.getBarcode() + "'/>"
                 + cart.getQuantity()
                 + " <button type='submit' name='addToCart' class=\"glyphicon glyphicon-plus btn btn-success\"></button></form></td>\r\n"
-                + "      <td><span>&#8377;</span> " + (book.getPrice() * cart.getQuantity()) + "</td>\r\n"
+                + "      <td>" + (book.getPrice() * cart.getQuantity()) + "</td>\r\n"
                 + "    </tr>\r\n";
     }
 

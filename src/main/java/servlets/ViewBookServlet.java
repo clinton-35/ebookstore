@@ -46,7 +46,7 @@ public class ViewBookServlet extends HttpServlet {
             StoreUtil.setActiveTab(pw, "books");
 
             // Show the heading for the page
-            pw.println("<div id='topmid' style='background-color:grey'>Available Books"
+            pw.println("<div id='topmid' style='background-color:grey'>Browse Our EBook Collection"
                     + "<form action=\"cart\" method=\"post\" style='float:right; margin-right:20px'>"
                     + "<input type='submit' class=\"btn btn-primary\" name='cart' value='Proceed'/></form>"
                     + "</div>");
@@ -132,7 +132,7 @@ public class ViewBookServlet extends HttpServlet {
                 + "                    </div>\r\n"
                 + "                    <div class=\"col-sm-6\">\r\n"
                 + "                        <p class=\"card-text\">\r\n"
-                + "                        Price: <span style=\"font-weight:bold; color:green\"> &#8377; "
+                + "                        Price: <span style=\"font-weight:bold; color:green\">"
                 + book.getPrice()
                 + " </span>\r\n"
                 + "                        </p>\r\n"

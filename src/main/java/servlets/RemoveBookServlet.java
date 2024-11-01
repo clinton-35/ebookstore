@@ -60,18 +60,21 @@ public class RemoveBookServlet extends HttpServlet {
     }
 
     private static void showRemoveBookForm(PrintWriter pw) {
-        String form = "<form action=\"removebook\" method=\"post\" class='my-5'>\r\n"
-                + "        <table class=\"tab\">\r\n"
-                + "        <tr>\r\n"
-                + "            <td>\r\n"
-                + "                <label for=\"bookCode\">Enter BookId to Remove </label>\r\n"
-                + "                <input type=\"text\" name=\"bookId\" placeholder=\"Enter Book Id\" id=\"bookCode\" required>\r\n"
-                + "                <input class=\"btn btn-danger my-2\" type=\"submit\" value=\"Remove Book\">\r\n"
-                + "            </td>\r\n"
-                + "        </tr>\r\n"
-                + "\r\n"
-                + "        </table>\r\n"
-                + "    </form>";
+        String form = 
+                "<form action=\"removebook\" method=\"post\" class=\"my-5\">" +
+                "    <table class=\"tab\" style=\"width: 40%; background-color: #f2f2f2; border: 2px solid #e74c3c; border-radius: 8px;\">" +
+                "        <tr>" +
+                "            <td style=\"padding: 20px;\">" +
+                "                <label for=\"bookCode\" style=\"color: #333; font-weight: bold;\">Enter Book ID to Remove:</label>" +
+                "                <input type=\"text\" name=\"bookId\" placeholder=\"Enter Book ID\" id=\"bookCode\" required " +
+                "                       style=\"width: 100%; padding: 8px; margin-top: 4px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;\"><br/>" +
+                "                <input class=\"btn btn-danger my-2\" type=\"submit\" value=\"Remove Book\" " +
+                "                       style=\"background-color: #e74c3c; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;\">" +
+                "            </td>" +
+                "        </tr>" +
+                "    </table>" +
+                "</form>";
+
         pw.println(form);
     }
 
