@@ -1,80 +1,74 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	background-image: url("Photo.jpg");
-	font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url("/onlinebookstore/WebContent/Photo.jpg"); /* Replace with your vintage background image */
+    font-family: 'Georgia', serif; /* Classic serif font for vintage feel */
+    color: #333; /* Dark gray for better readability */
 }
 
 #topmid {
-	border: 0px solid black;
-	color: #FFFFFF;
-	text-align: center;
-	font-weight: bold;
-	margin: auto;
-	font-style: oblique;
-	font-size: 25px;
-	text-shadow: 2px 2px #ff0000;
+    border: 0px solid black;
+    color: #D6B94A; /* Gold color for vintage effect */
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    font-family: 'Georgia', serif;
+    font-size: 30px;
+    text-shadow: 1px 1px #000; /* Subtle shadow for depth */
 }
 
 .tab {
-	font-weight: bold;
-	margin: auto;
-	width:35%;
-	text-align:center;
+    font-weight: bold;
+    margin: auto;
+    width: 40%; /* Increased width for better visibility */
+    text-align: center;
 }
 
 .tab tr {
-	border: 1px black hidden;
-	border-radius: 10px;
-	background-color: #FFE5CC;
-	font-size: 22px;
-	float:left;
-	padding-left:17%;
-	padding-bottom:5px;
-	padding-top:2px;
-	margin-bottom:10px;
-	width:100%;
+    border: 1px solid #C8C8C8; /* Light border for table rows */
+    border-radius: 10px;
+    background-color: #F9E4C1; /* Soft cream color */
+    font-size: 20px; /* Slightly smaller font for the vintage look */
+    padding: 10px; /* Added padding for better spacing */
+    margin-bottom: 15px; /* Increased spacing between rows */
 }
 
 a:hover {
-	color: red;
+    color: #8B0000; /* Dark red on hover for contrast */
+    text-decoration: underline; /* Underline for emphasis */
 }
 
 a:link {
-	color: black;
-	text-decoration: none;
+    color: #5A3E2D; /* Brown color for links */
+    text-decoration: none;
 }
 
-header  nav li :hover{
-	border-bottom: 2px #ffff80 solid;
-	border-radius: 10px;
-	color: #ffff80;
-	padding-bottom:2px;
+header nav li:hover {
+    border-bottom: 2px #D6B94A solid; /* Gold underline on hover */
+    border-radius: 10px;
+    color: #D6B94A; /* Gold color for active links */
 }
 
-header  nav li{
-    display: table;
-    height: 80%;
-    float: left;
-    margin-right: 20px;
-	padding-left: 10px;
-
+header nav li {
+    display: inline-block; /* Changed to inline-block for better spacing */
+    margin-right: 15px;
+    padding-left: 10px;
 }
 
-header  nav a{
-    color: #ffffff;
+header nav a {
+    color: #F9E4C1; /* Light color for navbar links */
 }
 
 header nav li a.active {
-	border-bottom: 2px #ffff80 solid;
-	border-radius: 10px;
-	color: #ffff80;
-	padding-bottom:2px;
+    border-bottom: 2px #D6B94A solid; /* Gold underline for active link */
+    border-radius: 10px;
+    color: #D6B94A;
 }
-
 
 .holds-the-iframe {
-	background: url(loader.gif) center center no-repeat;
+    background: url(loader.gif) center center no-repeat;
 }
+
+/* Additional styles for buttons or forms can be added here */
